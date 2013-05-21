@@ -1,0 +1,13 @@
+11.05.12
+sL Polynom re-evaluated form Konnov (2008) (lower than Ardey)
+removed the slope limiters from the Fluxes library
+
+03.07.12
+Version 11:
+separate transport equations fof tauHI and tauLO
+
+17.08.12
+Version 14:
+add the turbulent transport of enthalpy to eEqn and euEqn:
+	- fvc::laplacian(turbulence->alphaEff(), h) // no longer neglected !
+has to be explicit, as h is not the variable solved for, but rhoE	
