@@ -25,7 +25,7 @@ Class
     Foam::interpolationLookUpTable
 
 Description
-    A list of lists. Interpolates based on the first dimension.
+    A list of lists. Interpolates in all dimensions.
     The values must be monotonically increasing or decreasing in each dimension
 
 Note
@@ -75,13 +75,10 @@ private:
         //- Table dimensions
         List<label> dim_;
 
-        //- Min on each dimension
+        //- Min in each dimension
         List<scalar> min_;
 
-        //- Deltas on each dimension
-        //List<scalar> delta_;
-
-        //- Maximum on each dimension
+        //- Maximum in each dimension
         List<scalar> max_;
 
 	// coordinate is increasing (1) or decreasing (-1)
@@ -125,11 +122,7 @@ private:
         void dimensionTable();
 
         //- Find table index by scalarList
-//        label index(const List<scalar>&, const bool lastDim=true) const;
         label index(const List<scalar>&, bool) const;
-
-        //- Find table index by scalar
-        //label index(const scalar) const;
 
         //- Check range of lookup value
         bool checkRange(const scalar, const label) const;
@@ -147,9 +140,6 @@ private:
 
         // Check list is monotonically increasing
         void check() const;
-
-        // find hi index, interpolate and populate interpOutput_
-        //void findHi(const label lo, const scalar retvals);
 
         // find hi index, interpolate and populate interpOutput_
         void findHi(const label lo, const List<scalar>& retvals, bool explain);
@@ -170,14 +160,8 @@ public:
             const word& instance,
             const fvMesh& mesh
         );
-/*	
-        interpolationLookUpTable
-        (
-            const fileName& fn,
-            const fvMesh& mesh
-        );
-*/	
-        interpolationLookUpTable
+
+	interpolationLookUpTable
         (
             const IOdictionary& dict
         );
@@ -195,9 +179,6 @@ public:
 
         //- Return true if the filed exists in the table
         bool found(const word& fieldName) const;
-
-        //- Return the output list given a single input scalar
-        //const List<scalar>& lookUp(const scalar);
 
         //- Return the output list given an input scalar list
         const List<scalar>& lookUp(const List<scalar>&, bool);
@@ -936,16 +917,6 @@ bool Foam::interpolationLookUpTable<Type>::found(const word& fieldName) const
 
 
 
-/*
-template<class Type>
-const Foam::scalarList&
-Foam::interpolationLookUpTable<Type>::lookUp(const scalar retvals)
-{
-    const label lo = index(retvals);
-    findHi(lo, retvals);
-    return interpOutput_;
-}
-*/
 
 template<class Type>
 const Foam::scalarList&
@@ -996,7 +967,8 @@ void Foam::interpolationLookUpTable<Type>::findHi
     bool explain
 )
 {
-    List<label> hi(output_.size(),-1);
+    List<label> hi(entryIndices_.size(),-1); //Josef
+    //List<label> hi(output_.size(),-1);
     //List<scalar> baseValue(output_.size(),0.0);
     label maxhi = lo;
 
@@ -1016,6 +988,7 @@ void Foam::interpolationLookUpTable<Type>::findHi
         scalar tmp = 0;
         label ofield = outputIndices_[j];
 
+	maxhi=lo; //Josef
 	//Info << "findHi(): outputIndices j = " << j << ", baseValue = " << baseValue << " (ofield = " << ofield << ", lo = " << lo << ")"<<  endl;
 
         forAll(entryIndices_,i)
