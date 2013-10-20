@@ -20,14 +20,14 @@ FoamFile
     wand
     {
         type            wall;
-        nFaces          5240;
-        startFace       146480;
+        nFaces          3240;
+        startFace       87480;
     }
     frontAndBack
     {
         type            empty;
-        nFaces          149100;
-        startFace       151720;
+        nFaces          89100;
+        startFace       90720;
     }
 )
 

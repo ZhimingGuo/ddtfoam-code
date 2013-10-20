@@ -152,40 +152,6 @@ volScalarField& yN2  = Y[n2Index];
 //fields.add(e);
 fields.add(h);
 
-/*
-//DimensionedField<scalar, volMesh> dQsensible
-volScalarField dQsensible
-(
-    IOobject
-    (
-        "dQsensible",
-        runTime.timeName(),
-        mesh,
-        IOobject::NO_READ,
-        IOobject::NO_WRITE
-    ),
-    mesh,
-    dimensionedScalar("dQsensible", dimEnergy/dimTime/dimVolume, 0.0)
-);
-//dQsensible.write();
-//Info << "dQsensible = " << nl << dQsensible << endl;
-*/
-/*
-    volScalarField maxP
-    (
-        IOobject
-        (
-            "maxP",
-            runTime.timeName(),
-            mesh,
-            IOobject::READ_IF_PRESENT,
-            IOobject::NO_WRITE
-        ),
-        p
-    );
-    //maxP.write();
-*/
-
 
 
 volScalarField Cp = thermo.Cp();
@@ -193,8 +159,6 @@ volScalarField Cv = thermo.Cv();
 // first had to implement Cv in
 // src/thermophysicalModels/reactionThermo/combustionThermo/mixtureThermos/hsPsiMixtureThermo 
 
-
-//Info << "gamma: " << nl << Cp/Cv << endl;
 
 volScalarField cSound  // speed of sound
 (
@@ -204,16 +168,16 @@ volScalarField cSound  // speed of sound
         runTime.timeName(),
         mesh,
         IOobject::NO_READ,
-        IOobject::NO_WRITE
+        IOobject::AUTO_WRITE
     ),
 //    mesh,
 //    dimensionedScalar("zero", dimensionSet(0,1,-1,0,0,0,0), 0.0)
     sqrt((Cp/Cv)*(Cp - Cv)*T)
 );
 cSound.write();	
-//Info << "cSound: " << nl << cSound << endl;
 
-volScalarField c  // TFC reaction progress
+
+volScalarField c  // reaction progress
 (
     IOobject
     (
@@ -251,12 +215,6 @@ volScalarField fH  // H2 mixture fraction (unburned)
 fH.write();
 
 
-// #include "tfc_computeY.H"
-// forAll(Y, i)
-// {
-//     Y[i].write();
-// }
-
     unburnedThermo uthermo(mesh, p, fH, yO2inAir);
     const volScalarField& Tu=uthermo.Tu();
     Info << " Tu varies between " << min(Tu).value() << " and " << max(Tu).value() << " K." << endl;
@@ -275,7 +233,6 @@ volScalarField omegaC  // source term for c
         IOobject::AUTO_WRITE
     ),
     mesh,
-//    dimensionedScalar("omegaC", dimless/dimTime, 0.0)
     dimensionedScalar("omegaC", dimMass/dimVolume/dimTime, 0.0)
 );
 omegaC.write();
@@ -329,7 +286,6 @@ volScalarField rhoUnburned  // density of unburned mixture
     dimensionedScalar("rhoUnburned", dimMass/dimVolume, 0.0)
 );
 
-//Info<< "rhoUnburned min...max   = " << min(rhoUnburned).value() << " ... " << max(rhoUnburned).value() << " kg/m^3" << endl;
 
 volScalarField etaUnburned  // dynamic viscosity of unburned mixture
 (
@@ -422,22 +378,6 @@ volScalarField gCr  // critical velocity gradient for quenching
 );
 
 volScalarField epsilonCr = 0.0*turbulence->epsilon();
-/*
-volScalarField epsilonCr  // critical dissipation
-(
-    IOobject
-    (
-        "epsilonCr",
-        runTime.timeName(),
-        mesh,
-        IOobject::NO_READ,
-        IOobject::NO_WRITE
-    ),
-    15*nuUnburned*pow(gCr,2)
-
-);
-Info<< "epsilonCr min...max     = " << min(epsilonCr).value() << " ... " << max(epsilonCr).value() << " m^2/s^3" << endl;
-*/
 
 volScalarField G  // stretch factor
 (

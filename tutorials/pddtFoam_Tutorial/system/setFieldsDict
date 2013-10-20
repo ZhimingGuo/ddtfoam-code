@@ -18,11 +18,11 @@ FoamFile
 	defaultFieldValues
 	(
             volScalarFieldValue c   0.00
-            volScalarFieldValue fH 0.02276
-            volScalarFieldValue H2  0.02276
-            volScalarFieldValue O2  0.22764
+            volScalarFieldValue fH 0.02908
+            volScalarFieldValue H2  0.02908
+            volScalarFieldValue O2  0.22617
             volScalarFieldValue H2O 0.0
-            volScalarFieldValue N2  0.74959
+            volScalarFieldValue N2  0.74475
             volScalarFieldValue T   293.0
             volScalarFieldValue Tu   293.0
         );
@@ -34,11 +34,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.073
-	    volScalarFieldValue fH  0.00547
-	    volScalarFieldValue H2  0.00547
-	    volScalarFieldValue O2  0.23167
-	    volScalarFieldValue N2  0.76286
+	    // xH2 = 0.097
+	    volScalarFieldValue fH  0.00744
+	    volScalarFieldValue H2  0.00744
+	    volScalarFieldValue O2  0.23121
+	    volScalarFieldValue N2  0.76135
 
         );
     }
@@ -48,11 +48,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.075
-	    volScalarFieldValue fH  0.00563
-	    volScalarFieldValue H2  0.00563
-	    volScalarFieldValue O2  0.23163
-	    volScalarFieldValue N2  0.76273
+	    // xH2 = 0.099
+	    volScalarFieldValue fH  0.00764
+	    volScalarFieldValue H2  0.00764
+	    volScalarFieldValue O2  0.23117
+	    volScalarFieldValue N2  0.76120
 
         );
     }
@@ -62,11 +62,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.078
-	    volScalarFieldValue fH  0.00590
-	    volScalarFieldValue H2  0.00590
-	    volScalarFieldValue O2  0.23157
-	    volScalarFieldValue N2  0.76253
+	    // xH2 = 0.103
+	    volScalarFieldValue fH  0.00797
+	    volScalarFieldValue H2  0.00797
+	    volScalarFieldValue O2  0.23109
+	    volScalarFieldValue N2  0.76094
 
         );
     }
@@ -76,11 +76,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.083
-	    volScalarFieldValue fH  0.00629
-	    volScalarFieldValue H2  0.00629
-	    volScalarFieldValue O2  0.23148
-	    volScalarFieldValue N2  0.76223
+	    // xH2 = 0.109
+	    volScalarFieldValue fH  0.00846
+	    volScalarFieldValue H2  0.00846
+	    volScalarFieldValue O2  0.23098
+	    volScalarFieldValue N2  0.76057
 
         );
     }
@@ -90,11 +90,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.089
-	    volScalarFieldValue fH  0.00680
-	    volScalarFieldValue H2  0.00680
-	    volScalarFieldValue O2  0.23136
-	    volScalarFieldValue N2  0.76184
+	    // xH2 = 0.116
+	    volScalarFieldValue fH  0.00910
+	    volScalarFieldValue H2  0.00910
+	    volScalarFieldValue O2  0.23083
+	    volScalarFieldValue N2  0.76007
 
         );
     }
@@ -104,11 +104,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.097
-	    volScalarFieldValue fH  0.00745
-	    volScalarFieldValue H2  0.00745
-	    volScalarFieldValue O2  0.23121
-	    volScalarFieldValue N2  0.76134
+	    // xH2 = 0.125
+	    volScalarFieldValue fH  0.00992
+	    volScalarFieldValue H2  0.00992
+	    volScalarFieldValue O2  0.23064
+	    volScalarFieldValue N2  0.75945
 
         );
     }
@@ -118,11 +118,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.106
-	    volScalarFieldValue fH  0.00823
-	    volScalarFieldValue H2  0.00823
-	    volScalarFieldValue O2  0.23103
-	    volScalarFieldValue N2  0.76074
+	    // xH2 = 0.136
+	    volScalarFieldValue fH  0.01091
+	    volScalarFieldValue H2  0.01091
+	    volScalarFieldValue O2  0.23040
+	    volScalarFieldValue N2  0.75868
 
         );
     }
@@ -132,11 +132,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.117
-	    volScalarFieldValue fH  0.00917
-	    volScalarFieldValue H2  0.00917
-	    volScalarFieldValue O2  0.23081
-	    volScalarFieldValue N2  0.76002
+	    // xH2 = 0.149
+	    volScalarFieldValue fH  0.01209
+	    volScalarFieldValue H2  0.01209
+	    volScalarFieldValue O2  0.23013
+	    volScalarFieldValue N2  0.75778
 
         );
     }
@@ -146,11 +146,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.129
-	    volScalarFieldValue fH  0.01025
-	    volScalarFieldValue H2  0.01025
-	    volScalarFieldValue O2  0.23056
-	    volScalarFieldValue N2  0.75919
+	    // xH2 = 0.163
+	    volScalarFieldValue fH  0.01346
+	    volScalarFieldValue H2  0.01346
+	    volScalarFieldValue O2  0.22981
+	    volScalarFieldValue N2  0.75673
 
         );
     }
@@ -160,11 +160,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.143
-	    volScalarFieldValue fH  0.01150
-	    volScalarFieldValue H2  0.01150
-	    volScalarFieldValue O2  0.23027
-	    volScalarFieldValue N2  0.75824
+	    // xH2 = 0.179
+	    volScalarFieldValue fH  0.01503
+	    volScalarFieldValue H2  0.01503
+	    volScalarFieldValue O2  0.22944
+	    volScalarFieldValue N2  0.75553
 
         );
     }
@@ -174,11 +174,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.158
-	    volScalarFieldValue fH  0.01290
-	    volScalarFieldValue H2  0.01290
-	    volScalarFieldValue O2  0.22994
-	    volScalarFieldValue N2  0.75716
+	    // xH2 = 0.197
+	    volScalarFieldValue fH  0.01681
+	    volScalarFieldValue H2  0.01681
+	    volScalarFieldValue O2  0.22903
+	    volScalarFieldValue N2  0.75416
 
         );
     }
@@ -188,11 +188,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.174
-	    volScalarFieldValue fH  0.01448
-	    volScalarFieldValue H2  0.01448
-	    volScalarFieldValue O2  0.22957
-	    volScalarFieldValue N2  0.75595
+	    // xH2 = 0.215
+	    volScalarFieldValue fH  0.01880
+	    volScalarFieldValue H2  0.01880
+	    volScalarFieldValue O2  0.22857
+	    volScalarFieldValue N2  0.75263
 
         );
     }
@@ -202,11 +202,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.191
-	    volScalarFieldValue fH  0.01622
-	    volScalarFieldValue H2  0.01622
-	    volScalarFieldValue O2  0.22917
-	    volScalarFieldValue N2  0.75461
+	    // xH2 = 0.235
+	    volScalarFieldValue fH  0.02102
+	    volScalarFieldValue H2  0.02102
+	    volScalarFieldValue O2  0.22805
+	    volScalarFieldValue N2  0.75093
 
         );
     }
@@ -216,11 +216,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.209
-	    volScalarFieldValue fH  0.01813
-	    volScalarFieldValue H2  0.01813
-	    volScalarFieldValue O2  0.22872
-	    volScalarFieldValue N2  0.75315
+	    // xH2 = 0.256
+	    volScalarFieldValue fH  0.02346
+	    volScalarFieldValue H2  0.02346
+	    volScalarFieldValue O2  0.22748
+	    volScalarFieldValue N2  0.74906
 
         );
     }
@@ -230,11 +230,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.228
-	    volScalarFieldValue fH  0.02021
-	    volScalarFieldValue H2  0.02021
-	    volScalarFieldValue O2  0.22824
-	    volScalarFieldValue N2  0.75155
+	    // xH2 = 0.277
+	    volScalarFieldValue fH  0.02612
+	    volScalarFieldValue H2  0.02612
+	    volScalarFieldValue O2  0.22686
+	    volScalarFieldValue N2  0.74702
 
         );
     }
@@ -244,11 +244,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.247
-	    volScalarFieldValue fH  0.02245
-	    volScalarFieldValue H2  0.02245
-	    volScalarFieldValue O2  0.22772
-	    volScalarFieldValue N2  0.74983
+	    // xH2 = 0.300
+	    volScalarFieldValue fH  0.02901
+	    volScalarFieldValue H2  0.02901
+	    volScalarFieldValue O2  0.22619
+	    volScalarFieldValue N2  0.74480
 
         );
     }
@@ -258,11 +258,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.267
-	    volScalarFieldValue fH  0.02486
-	    volScalarFieldValue H2  0.02486
-	    volScalarFieldValue O2  0.22716
-	    volScalarFieldValue N2  0.74799
+	    // xH2 = 0.322
+	    volScalarFieldValue fH  0.03213
+	    volScalarFieldValue H2  0.03213
+	    volScalarFieldValue O2  0.22546
+	    volScalarFieldValue N2  0.74241
 
         );
     }
@@ -272,11 +272,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.287
-	    volScalarFieldValue fH  0.02741
-	    volScalarFieldValue H2  0.02741
-	    volScalarFieldValue O2  0.22656
-	    volScalarFieldValue N2  0.74603
+	    // xH2 = 0.345
+	    volScalarFieldValue fH  0.03545
+	    volScalarFieldValue H2  0.03545
+	    volScalarFieldValue O2  0.22469
+	    volScalarFieldValue N2  0.73986
 
         );
     }
@@ -286,11 +286,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.307
-	    volScalarFieldValue fH  0.03008
-	    volScalarFieldValue H2  0.03008
-	    volScalarFieldValue O2  0.22594
-	    volScalarFieldValue N2  0.74398
+	    // xH2 = 0.367
+	    volScalarFieldValue fH  0.03896
+	    volScalarFieldValue H2  0.03896
+	    volScalarFieldValue O2  0.22387
+	    volScalarFieldValue N2  0.73717
 
         );
     }
@@ -300,11 +300,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.327
-	    volScalarFieldValue fH  0.03287
-	    volScalarFieldValue H2  0.03287
-	    volScalarFieldValue O2  0.22529
-	    volScalarFieldValue N2  0.74184
+	    // xH2 = 0.389
+	    volScalarFieldValue fH  0.04263
+	    volScalarFieldValue H2  0.04263
+	    volScalarFieldValue O2  0.22301
+	    volScalarFieldValue N2  0.73435
 
         );
     }
@@ -314,11 +314,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.346
-	    volScalarFieldValue fH  0.03573
-	    volScalarFieldValue H2  0.03573
-	    volScalarFieldValue O2  0.22462
-	    volScalarFieldValue N2  0.73965
+	    // xH2 = 0.411
+	    volScalarFieldValue fH  0.04643
+	    volScalarFieldValue H2  0.04643
+	    volScalarFieldValue O2  0.22213
+	    volScalarFieldValue N2  0.73144
 
         );
     }
@@ -328,11 +328,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.365
-	    volScalarFieldValue fH  0.03861
-	    volScalarFieldValue H2  0.03861
-	    volScalarFieldValue O2  0.22395
-	    volScalarFieldValue N2  0.73744
+	    // xH2 = 0.431
+	    volScalarFieldValue fH  0.05030
+	    volScalarFieldValue H2  0.05030
+	    volScalarFieldValue O2  0.22123
+	    volScalarFieldValue N2  0.72847
 
         );
     }
@@ -342,11 +342,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.382
-	    volScalarFieldValue fH  0.04148
-	    volScalarFieldValue H2  0.04148
-	    volScalarFieldValue O2  0.22328
-	    volScalarFieldValue N2  0.73523
+	    // xH2 = 0.450
+	    volScalarFieldValue fH  0.05416
+	    volScalarFieldValue H2  0.05416
+	    volScalarFieldValue O2  0.22033
+	    volScalarFieldValue N2  0.72551
 
         );
     }
@@ -356,11 +356,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.399
-	    volScalarFieldValue fH  0.04427
-	    volScalarFieldValue H2  0.04427
-	    volScalarFieldValue O2  0.22263
-	    volScalarFieldValue N2  0.73310
+	    // xH2 = 0.468
+	    volScalarFieldValue fH  0.05795
+	    volScalarFieldValue H2  0.05795
+	    volScalarFieldValue O2  0.21945
+	    volScalarFieldValue N2  0.72261
 
         );
     }
@@ -370,11 +370,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.413
-	    volScalarFieldValue fH  0.04690
-	    volScalarFieldValue H2  0.04690
-	    volScalarFieldValue O2  0.22202
-	    volScalarFieldValue N2  0.73108
+	    // xH2 = 0.484
+	    volScalarFieldValue fH  0.06154
+	    volScalarFieldValue H2  0.06154
+	    volScalarFieldValue O2  0.21861
+	    volScalarFieldValue N2  0.71985
 
         );
     }
@@ -384,11 +384,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.426
-	    volScalarFieldValue fH  0.04928
-	    volScalarFieldValue H2  0.04928
-	    volScalarFieldValue O2  0.22147
-	    volScalarFieldValue N2  0.72925
+	    // xH2 = 0.498
+	    volScalarFieldValue fH  0.06481
+	    volScalarFieldValue H2  0.06481
+	    volScalarFieldValue O2  0.21785
+	    volScalarFieldValue N2  0.71734
 
         );
     }
@@ -398,11 +398,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.436
-	    volScalarFieldValue fH  0.05134
-	    volScalarFieldValue H2  0.05134
-	    volScalarFieldValue O2  0.22099
-	    volScalarFieldValue N2  0.72768
+	    // xH2 = 0.509
+	    volScalarFieldValue fH  0.06765
+	    volScalarFieldValue H2  0.06765
+	    volScalarFieldValue O2  0.21719
+	    volScalarFieldValue N2  0.71516
 
         );
     }
@@ -412,11 +412,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.444
-	    volScalarFieldValue fH  0.05295
-	    volScalarFieldValue H2  0.05295
-	    volScalarFieldValue O2  0.22061
-	    volScalarFieldValue N2  0.72644
+	    // xH2 = 0.518
+	    volScalarFieldValue fH  0.06990
+	    volScalarFieldValue H2  0.06990
+	    volScalarFieldValue O2  0.21666
+	    volScalarFieldValue N2  0.71344
 
         );
     }
@@ -426,11 +426,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.450
-	    volScalarFieldValue fH  0.05404
-	    volScalarFieldValue H2  0.05404
-	    volScalarFieldValue O2  0.22036
-	    volScalarFieldValue N2  0.72560
+	    // xH2 = 0.524
+	    volScalarFieldValue fH  0.07142
+	    volScalarFieldValue H2  0.07142
+	    volScalarFieldValue O2  0.21631
+	    volScalarFieldValue N2  0.71227
 
         );
     }
@@ -440,11 +440,11 @@ regions
 
         fieldValues
         (
-	    // xH2 = 0.452
-	    volScalarFieldValue fH  0.05451
-	    volScalarFieldValue H2  0.05451
-	    volScalarFieldValue O2  0.22025
-	    volScalarFieldValue N2  0.72525
+	    // xH2 = 0.526
+	    volScalarFieldValue fH  0.07210
+	    volScalarFieldValue H2  0.07210
+	    volScalarFieldValue O2  0.21615
+	    volScalarFieldValue N2  0.71175
 
         );
     }
@@ -458,16 +458,16 @@ regions
         (
 
             volScalarFieldValue c   1.00
-            volScalarFieldValue fH  0.02276
-            volScalarFieldValue H2  0.00000
-            volScalarFieldValue O2  0.04697
-            volScalarFieldValue H2O 0.20343
-            volScalarFieldValue N2  0.72525
-            volScalarFieldValue T   2204.7
+            volScalarFieldValue fH  0.02908
+            volScalarFieldValue H2  0.00058
+            volScalarFieldValue O2  0.00000
+            volScalarFieldValue H2O 0.25467
+            volScalarFieldValue N2  0.71175
+            volScalarFieldValue T   2448.5
         );
     }
 );
 
 // ************************************************************************* //
-// inhomogeneous mixture for closed vessel with 25.0 % H2 generated         //
+// inhomogeneous mixture for closed vessel with 30.0 % H2 generated         //
 // ************************************************************************* //

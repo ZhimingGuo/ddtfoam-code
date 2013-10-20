@@ -17,10 +17,13 @@ FoamFile
 
 thermoType ePsiMixtureThermo<reactingMixture<gasThermoPhysics>>;
 
-CHEMKINFile                 "$FOAM_CASE/constant/constH2System.inp";
-CHEMKINThermoFile           "$FOAM_CASE/constant/constH2System.dat";
+
+CHEMKINFile                 "constH2System.inp";
+CHEMKINThermoFile           "constH2System.dat";
 
 inertSpecie                 N2;
+
+
 
 // ************************************************************************* //
 

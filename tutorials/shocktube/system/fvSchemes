@@ -22,27 +22,26 @@ ddtSchemes
 
 gradSchemes
 {
-    default 		Gauss linear;
-    grad(scalarSlope)	cellMDLimited Gauss linear 1;
-    grad(USlope)	cellMDLimited Gauss linear 1;
+   // default         Gauss linear;
+    default cellMDLimited Gauss linear 1;
+   //default cellMDLimited leastSquares 1;
+
 }
 
 divSchemes
 {
     default         none;
-
-    div(tauShear)        	Gauss linear;
-    div(tauMC)        		Gauss linear;
-    div((tauShear&U))    	Gauss linear;
-    div((p*U))			Gauss linear;
-
-    div((U+((sL*Xi)*-grad(c)))) Gauss linear;
-    div((sL*grad(b))) 		Gauss linear;
-    div(U) 	    		Gauss linear;
-    div((sL*-grad(c))) 		Gauss linear;
+    
+    div(tauMC)        Gauss linear;
+    div(tauShear)        Gauss linear;
+    div((tauShear&U))    Gauss linear;
     
     div(phiSt,c)    	Gauss vanLeer01;    
-    div(phiXi,Xi)	Gauss vanLeer;
+    div((U+((sL*Xi)*-grad(c)))) Gauss linear;
+    div((sL*grad(b))) 	Gauss linear;
+    div(U) 	    	Gauss linear;
+    div((sL*-grad(c))) 	Gauss linear;
+    div(phiXi,Xi)	Gauss vanLeer01;
     
     div(phi,k) 	     	Gauss upwind;
     div(phi,epsilon) 	Gauss upwind; 
@@ -62,17 +61,18 @@ interpolationSchemes
     interpolate(tauMC) Gamma phi 1.0;
     interpolate(mu) Gamma phi 1.0;
     interpolate(muEff) Gamma phi 1.0;
-    
-    reconstruct(rho) limitedLinear 1.0;
-    reconstruct(U)   limitedLinearV 1.0;
-    reconstruct(T)   limitedLinear 1.0;
 
-    interpolate(rho) linear; 		// for CFL
-    reconstruct(cSound) linear; 	// for CFL
+
+    reconstruct(rho) Gamma 1.0;
+    reconstruct(U)   GammaV 1.0;
+    reconstruct(T)   Gamma 1.0;
+
+    interpolate(rho) linear; // for CFL
+    reconstruct(cSound) linear; // for CFL
     
-    interpolate(p) linear;   		// for MinMax scheme    
-    interpolate(Teff) linear; 		// for MinMax scheme
-    interpolate(tau) linear;  		// for MinMax scheme
+    interpolate(p) linear; // for MinMax scheme    
+    interpolate(Teff) linear; // for MinMax scheme
+    interpolate(tau) linear;  // for MinMax scheme
 
     interpolate(-grad(c)) linear;
     interpolate(grad((1-c))) linear;

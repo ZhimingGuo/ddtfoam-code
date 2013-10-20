@@ -100,6 +100,8 @@ int main(int argc, char *argv[])
     
     Info<< "\nStarting time loop\n" << endl;
     
+    scalar flametip=-1e6;
+    
     while (runTime.run())
     {
       
@@ -197,12 +199,11 @@ int main(int argc, char *argv[])
 	    
             p.dimensionedInternalField() = rho.dimensionedInternalField() / thermo.psi().dimensionedInternalField();
             p.correctBoundaryConditions();
-	    //rho.boundaryField() = psi.boundaryField()*p.boundaryField();
 	    rho.correctBoundaryConditions();
 	    
 	    h = e + scalar(1.0)/psi;
 
-	    #include "euEqn.H"	// then I need proper BC for rhoEu (fixed temperature on wall)
+	    #include "euEqn.H"	// proper BC for rhoEu required (fixed temperature on wall)
 	    uthermo.correct();
 
 	    
@@ -223,6 +224,17 @@ int main(int argc, char *argv[])
 	    
 	    runTime.write();
 	    
+	    forAll(mesh.C(),i)
+	    {
+		if(c[i]>0.5)
+		{
+		    if(mesh.C()[i].component(0)>flametip)
+		    {
+			flametip=mesh.C()[i].component(0);
+		    }
+		}
+	    }
+	    Info << "The flame is at x= " << flametip << " m." << endl;
     }
 
 

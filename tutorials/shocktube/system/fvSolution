@@ -21,15 +21,41 @@ solvers
     {
         solver          diagonal;
     }
-    rhoE
-    {
-        solver          diagonal;
-    }
-    rhoEu
+
+    rhoU
     {
         solver          diagonal;
     }
 
+    rhoE
+    {
+        solver          diagonal;
+    }
+
+    rhoEu
+    {
+        solver          diagonal;
+    }
+    rhoYi
+    {
+        solver          diagonal;
+    }
+    rhoC
+    {
+        solver          diagonal;
+    }
+    rhoB
+    {
+        solver          diagonal;
+    }
+    rhoTau
+    {
+        solver          diagonal;
+    }
+    rhofH
+    {
+        solver          diagonal;
+    }
     U
     {
 	solver		PCG;
@@ -37,7 +63,7 @@ solvers
         tolerance        1e-06;
         relTol           0;
     };
-
+    
     fH
     {
 	solver		PCG;
@@ -59,15 +85,20 @@ solvers
         tolerance        1e-06;
         relTol           0;
     };
+    
+    
+    
+    
 
     Xi
     {
-	solver		 PBiCG;
-        preconditioner   DILU;
-        tolerance        1e-06;
-        relTol           0;
-    };
-
+        solver          smoothSolver;
+        smoother        GaussSeidel;
+        nSweeps         2;
+        tolerance       1e-09;
+        relTol          0.01;
+    }
+    
     k
     {
 	solver		 PBiCG;
@@ -94,12 +125,15 @@ solvers
 
 Riemann
 {
-    secondOrder yes;            // activate 2nd order accuracy
+    secondOrder yes;            // activate 2nd order extensions
+    multidimLimiter yes;        // Switch between 1D and multidimensional limiters
+    limiterName "MinmodSlope"; // vanAlbadaSlope, MinmodSlope, vanLeerSlope
+    epsilon "0";                // VK constant    
 }
 
 relaxationFactors
 {
-    // under-relaxation factors used in wave-transmissive schemes
+    // Note: under-relaxation factors used in wave-transmissive schemes
     k               0.2;
     omega           0.2;
 }
